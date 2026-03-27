@@ -1,7 +1,3 @@
-/* =========================
-   GLOBAL / RESET
-========================= */
-
 *,
 *::before,
 *::after {
@@ -33,16 +29,11 @@ section {
   text-align: center;
 }
 
-/* This is fine for general images NOT inside framed containers */
 .img-responsive {
   max-width: 100%;
   height: auto;
   display: block;
 }
-
-/* =========================
-   HEADER
-========================= */
 
 header {
   background-image:
@@ -93,10 +84,6 @@ header a {
   margin-top: 20px;
 }
 
-/* =========================
-   MAIN TYPOGRAPHY
-========================= */
-
 main {
   background-color: white;
 }
@@ -129,10 +116,6 @@ main p {
   opacity: 0.7;
 }
 
-/* =========================
-   BUTTONS
-========================= */
-
 .btn {
   display: inline-block;
   color: white;
@@ -146,11 +129,6 @@ main p {
   border-radius: 4px;
 }
 
-/* =========================
-   WHY RIO (2 COLUMNS)
-   FIX: framed feature image + fluid spacing
-========================= */
-
 .grid-2-columns {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -161,14 +139,12 @@ main p {
   padding: clamp(24px, 4vw, 60px) clamp(16px, 5vw, 80px);
 }
 
-/* Important: do NOT force height:auto here anymore (it causes the "too big in-between" issue) */
 .grid-2-columns img {
   width: 100%;
   display: block;
   border-radius: 8px;
 }
 
-/* Feature image frame (carnival.jpg) */
 .grid-image {
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -185,7 +161,6 @@ main p {
   object-position: top;
 }
 
-/* Local text styling in the Why Rio section */
 .grid-2-columns h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
@@ -208,23 +183,16 @@ main p {
   color: #333;
 }
 
-/* =========================
-   RESTAURANTS
-   FIX: fluid grid + smaller image frames + footer stacking
-========================= */
-
 section.secondary {
   background: #f8f8f8;
 }
 
-/* Fluid columns for in-between sizes */
 .grid-3-columns {
   display: grid;
   gap: 40px;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
-/* Card layout */
 .card {
   background: white;
   display: flex;
@@ -234,30 +202,25 @@ section.secondary {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Restaurant image frame: keep it from becoming huge */
 .card-header {
   overflow: hidden;
   border-radius: 8px;
   padding: 0;
-
-  /* Smaller, responsive height (tunes the "in-between" range) */
   height: clamp(160px, 18vw, 220px);
 }
 
-/* Image fills the frame */
 .card-header > img {
   width: 100%;
   height: 100%;
   display: block;
   object-fit: cover;
-  padding: 0; /* ensure old padding doesn't sneak back in */
+  padding: 0;
 }
 
 .card-body {
   padding: 20px;
 }
 
-/* Footer FIX: button + map should stack vertically */
 .card-footer {
   padding: 0 20px 20px;
   text-align: center;
@@ -268,7 +231,6 @@ section.secondary {
   align-items: stretch;
 }
 
-/* Button full width looks cleaner above the map */
 .card-footer .btn {
   width: 100%;
   text-align: center;
@@ -279,13 +241,9 @@ section.secondary {
   height: 200px;
   border: 0;
   display: block;
-  margin: 0; /* let the flex gap handle spacing */
+  margin: 0;
   border-radius: 8px;
 }
-
-/* =========================
-   INSTAGRAM GALLERY
-========================= */
 
 .instagram-embeds {
   padding: 0 16px;
@@ -294,16 +252,11 @@ section.secondary {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
-/* Override Instagram embed min width */
 .instagram-embeds .instagram-media {
   min-width: 0 !important;
   width: 100% !important;
   max-width: 100% !important;
 }
-
-/* =========================
-   FOOTER
-========================= */
 
 footer {
   color: white;
@@ -372,11 +325,6 @@ footer a {
   font-size: 12px;
 }
 
-/* =========================
-   RESPONSIVE BREAKPOINTS
-========================= */
-
-/* Tablet / small windows: stack Why Rio earlier */
 @media (max-width: 960px) {
   .grid-2-columns {
     grid-template-columns: 1fr;
